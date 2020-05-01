@@ -14,7 +14,6 @@ java -jar closure-compiler-v20200406.jar \
      --js protobuf-3.11.4/js/binary/**.js \
      --js xid.js \
      --js tslib.js \
-     --js node_modules/tslib/tslib.js \
      --js incremental-dom.js \
      --js node_modules/incremental-dom/dist/incremental-dom-cjs.js \
      --js simple.soy.js \
@@ -23,4 +22,6 @@ java -jar closure-compiler-v20200406.jar \
      --module_resolution NODE \
      --process_common_js_modules \
      --package_json_entry_names main \
-     --compilation_level ADVANCED_OPTIMIZATIONS
+     --compilation_level ADVANCED_OPTIMIZATIONS \
+     --js_output_file out.js \
+     --create_source_map out.js.map
