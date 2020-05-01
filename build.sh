@@ -13,7 +13,6 @@ java -jar closure-compiler-v20200406.jar \
      --js protobuf-3.11.4/js/map.js \
      --js protobuf-3.11.4/js/message.js \
      --js protobuf-3.11.4/js/binary/**.js \
-     --js proto/**.js \
      --js xid.js \
      --js simple.soy.js \
      --js hello.js \
