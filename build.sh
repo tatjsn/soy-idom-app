@@ -1,7 +1,15 @@
 java -jar closure-compiler-v20200406.jar \
      --js node_modules/google-closure-library/closure/**.js \
      --js node_modules/google-closure-library/third_party/closure/**.js \
-     --js soy-jssrc/**.js \
+     --js soy-jssrc/soyutils_usegoog.js \
+     --js soy-jssrc/soyutils_velog.js \
+     --js soy-jssrc/soyutils_idom.js \
+     --js soy-jssrc/api_idom.js \
+     --js soy-jssrc/element_lib_idom.js \
+     --js soy-jssrc/checks.js \
+     --js soy-jssrc/global.js \
+     --js soy-jssrc/skiphandler.js \
+     --js soy-jssrc/shim.js \
      --js protobuf-3.11.4/js/map.js \
      --js protobuf-3.11.4/js/message.js \
      --js protobuf-3.11.4/js/binary/**.js \
