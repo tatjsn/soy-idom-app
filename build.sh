@@ -9,12 +9,18 @@ java -jar closure-compiler-v20200406.jar \
      --js soy-jssrc/checks.js \
      --js soy-jssrc/global.js \
      --js soy-jssrc/skiphandler.js \
-     --js soy-jssrc/shim.js \
      --js protobuf-3.11.4/js/map.js \
      --js protobuf-3.11.4/js/message.js \
      --js protobuf-3.11.4/js/binary/**.js \
      --js xid.js \
+     --js tslib.js \
+     --js node_modules/tslib/tslib.js \
+     --js incremental-dom.js \
+     --js node_modules/incremental-dom/dist/incremental-dom-cjs.js \
      --js simple.soy.js \
      --js hello.js \
-     --entry_point=hello.js \
+     --entry_point hello.js \
+     --module_resolution NODE \
+     --process_common_js_modules \
+     --package_json_entry_names main \
      --compilation_level ADVANCED_OPTIMIZATIONS
