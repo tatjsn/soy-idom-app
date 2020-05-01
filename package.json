@@ -1,0 +1,17 @@
+{
+  "name": "soy-idom-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "tatjsn <tatjsn@gmail.com> (https://github.com/tatjsn/)",
+  "license": "ISC",
+  "dependencies": {
+    "google-closure-library": "^20200406.0.0",
+    "incremental-dom": "^0.7.0",
+    "tslib": "^1.11.1"
+  }
+}
