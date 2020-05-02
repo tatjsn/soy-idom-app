@@ -1,4 +1,12 @@
+.PHONY: install
+
 all: dist/index.js
+
+install:
+	sh install-thirdparty.sh
+	npm install
+	mkdir -p build
+	mkdir -p dist
 
 build/%.idom.soy.js: %.soy
 	java -jar thirdparty/soy-2019-10-08-SoyToIncrementalDomSrcCompiler.jar \

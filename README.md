@@ -1,13 +1,19 @@
 # Soy Idom App
-Example of webapp using Incremental DOM backended Closure Templates (Soy)
+Boilerplate of webapp using Incremental DOM backended Closure Templates (Soy).
 
 ## How to install
-1. Run `sh install-thirdparty.sh`
-1. Run `npm install`
+```
+make install
+```
 
 ## How to build
-Run `make`
+```
+make
+```
 
 ## How to run
-1. Run `python -m SimpleHTTPServer 8000`
-2. Open http://localhost:8000
+```
+python -m SimpleHTTPServer 8000
+```
+
+Then open http://localhost:8000
