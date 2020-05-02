@@ -1,19 +1,20 @@
 java -jar closure-compiler-v20200406.jar \
      --js node_modules/google-closure-library/closure/**.js \
      --js node_modules/google-closure-library/third_party/closure/**.js \
-     --js soy-jssrc/soyutils_usegoog.js \
-     --js soy-jssrc/soyutils_velog.js \
-     --js soy-jssrc/soyutils_idom.js \
-     --js soy-jssrc/api_idom.js \
-     --js soy-jssrc/element_lib_idom.js \
-     --js soy-jssrc/checks.js \
-     --js soy-jssrc/global.js \
-     --js soy-jssrc/skiphandler.js \
+     --js soy-2019-10-08-jssrc_js/soyutils_usegoog.js \
+     --js soy-2019-10-08-jssrc_js/soyutils_velog.js \
+     --js soy-2019-10-08-jssrc_js/soyutils_idom.js \
+     --js soy-2019-10-08-jssrc_js/api_idom.js \
+     --js soy-2019-10-08-jssrc_js/element_lib_idom.js \
+     --js soy-2019-10-08-jssrc_js/checks.js \
+     --js soy-2019-10-08-jssrc_js/global.js \
+     --js soy-2019-10-08-jssrc_js/skiphandler.js \
      --js protobuf-3.11.4/js/map.js \
      --js protobuf-3.11.4/js/message.js \
      --js protobuf-3.11.4/js/binary/**.js \
      --js xid.js \
      --js tslib.js \
+     --js node_modules/tslib/tslib.js \
      --js incremental-dom.js \
      --js node_modules/incremental-dom/dist/incremental-dom-cjs.js \
      --js simple.soy.js \
