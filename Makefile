@@ -32,7 +32,9 @@ dist/index.js: index.js build/simple.idom.soy.js
 	--js shim/xid.js \
 	--js shim/tslib.js \
 	--js shim/incremental-dom.js \
+	--js node_modules/tslib/package.json \
 	--js node_modules/tslib/tslib.js \
+	--js node_modules/incremental-dom/package.json \
 	--js node_modules/incremental-dom/dist/incremental-dom-cjs.js \
 	--js $^ \
 	--entry_point index.js \
@@ -40,5 +42,9 @@ dist/index.js: index.js build/simple.idom.soy.js
 	--process_common_js_modules \
 	--package_json_entry_names main \
 	--compilation_level ADVANCED_OPTIMIZATIONS \
+	--dependency_mode PRUNE \
 	--js_output_file $@ \
-	--create_source_map $@.map
+	--create_source_map $@.map \
+	--hide_warnings_for node_modules \
+	--language_out ECMASCRIPT_2018 \
+	--define goog.DEBUG=false
