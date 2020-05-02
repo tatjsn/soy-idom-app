@@ -1,11 +1,11 @@
-all: dist/out.js
+all: dist/index.js
 
 build/%.idom.soy.js: %.soy
 	java -jar thirdparty/soy-2019-10-08-SoyToIncrementalDomSrcCompiler.jar \
 	--srcs $< \
 	--outputDirectory build
 
-dist/out.js: hello.js build/simple.idom.soy.js
+dist/index.js: index.js build/simple.idom.soy.js
 	java -jar thirdparty/closure-compiler-v20200406.jar \
 	--js node_modules/google-closure-library/closure/**.js \
 	--js node_modules/google-closure-library/third_party/closure/**.js \
@@ -19,14 +19,15 @@ dist/out.js: hello.js build/simple.idom.soy.js
 	--js thirdparty/soy-2019-10-08-jssrc_js/skiphandler.js \
 	--js thirdparty/protobuf-3.11.4/js/map.js \
 	--js thirdparty/protobuf-3.11.4/js/message.js \
-	--js thirdparty/protobuf-3.11.4/js/binary/**.js \
+	--js "thirdparty/protobuf-3.11.4/js/binary/*.js" \
+	--js "!thirdparty/protobuf-3.11.4/js/binary/*_test.js" \
 	--js shim/xid.js \
 	--js shim/tslib.js \
 	--js shim/incremental-dom.js \
 	--js node_modules/tslib/tslib.js \
 	--js node_modules/incremental-dom/dist/incremental-dom-cjs.js \
 	--js $^ \
-	--entry_point hello.js \
+	--entry_point index.js \
 	--module_resolution NODE \
 	--process_common_js_modules \
 	--package_json_entry_names main \

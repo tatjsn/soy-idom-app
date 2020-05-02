@@ -2,12 +2,7 @@
 Example of webapp using Incremental DOM backended Closure Templates (Soy)
 
 ## How to install
-1. Download following dependencies to `/thirdparty`
-   * closure-compiler-v20200406.jar from Maven Central
-   * soy-2019-10-08-jssrc_js.jar from Maven Central
-   * soy-2019-10-08-SoyToIncrementalDomSrcCompiler.jar from Maven Central
-   * protobuf-js-3.11.4.tar.gz from Github releases
-1. Unzip protobuf-js-3.11.4.tar.gz and soy-2019-10-08-jssrc_js.jar as subdirectories of `/thirdparty`
+1. Run `sh install-thirdparty.sh`
 1. Run `npm install`
 
 ## How to build
