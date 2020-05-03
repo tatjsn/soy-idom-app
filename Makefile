@@ -15,8 +15,8 @@ build/%.idom.soy.js: %.soy
 
 dist/index.js: index.js build/simple.idom.soy.js
 	java -jar thirdparty/closure-compiler-v20200406.jar \
-	--js node_modules/google-closure-library/closure/**.js \
-	--js node_modules/google-closure-library/third_party/closure/**.js \
+	--js "node_modules/google-closure-library/closure/goog/**.js" \
+	--js "node_modules/google-closure-library/third_party/closure/goog/**.js" \
 	--js thirdparty/soy-2019-10-08-jssrc_js/soyutils_usegoog.js \
 	--js thirdparty/soy-2019-10-08-jssrc_js/soyutils_velog.js \
 	--js thirdparty/soy-2019-10-08-jssrc_js/soyutils_idom.js \
