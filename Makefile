@@ -17,21 +17,14 @@ dist/index.js: index.js build/simple.idom.soy.js
 	java -jar thirdparty/closure-compiler-v20200406.jar \
 	--js "node_modules/google-closure-library/closure/goog/**.js" \
 	--js "node_modules/google-closure-library/third_party/closure/goog/**.js" \
-	--js thirdparty/soy-2019-10-08-jssrc_js/soyutils_usegoog.js \
-	--js thirdparty/soy-2019-10-08-jssrc_js/soyutils_velog.js \
-	--js thirdparty/soy-2019-10-08-jssrc_js/soyutils_idom.js \
-	--js thirdparty/soy-2019-10-08-jssrc_js/api_idom.js \
-	--js thirdparty/soy-2019-10-08-jssrc_js/element_lib_idom.js \
-	--js thirdparty/soy-2019-10-08-jssrc_js/checks.js \
-	--js thirdparty/soy-2019-10-08-jssrc_js/global.js \
-	--js thirdparty/soy-2019-10-08-jssrc_js/skiphandler.js \
+	--js "thirdparty/soy-2019-10-08-jssrc_js/*.js" \
+	--js "!thirdparty/soy-2019-10-08-jssrc_js/required_by_soy.js" \
+	--js "!thirdparty/soy-2019-10-08-jssrc_js/soy_requirements_onefile.js" \
 	--js thirdparty/protobuf-3.11.4/js/map.js \
 	--js thirdparty/protobuf-3.11.4/js/message.js \
 	--js "thirdparty/protobuf-3.11.4/js/binary/*.js" \
 	--js "!thirdparty/protobuf-3.11.4/js/binary/*_test.js" \
-	--js shim/xid.js \
-	--js shim/tslib.js \
-	--js shim/incremental-dom.js \
+	--js "shim/*.js" \
 	--js node_modules/tslib/package.json \
 	--js node_modules/tslib/tslib.js \
 	--js node_modules/incremental-dom/package.json \

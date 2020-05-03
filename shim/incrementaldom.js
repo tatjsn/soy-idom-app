@@ -1,4 +1,4 @@
-goog.module('google3.third_party.javascript.incremental_dom.index');
+goog.module('incrementaldom');
 
 const incrementaldom = require('incremental-dom');
 
