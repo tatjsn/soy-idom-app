@@ -30,7 +30,7 @@ dist/index.js: index.js build/simple.idom.soy.js
 	--js node_modules/incremental-dom/package.json \
 	--js node_modules/incremental-dom/dist/incremental-dom-cjs.js \
 	--js $^ \
-	--entry_point index.js \
+	--entry_point $< \
 	--module_resolution NODE \
 	--process_common_js_modules \
 	--package_json_entry_names main \
